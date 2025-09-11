@@ -1281,7 +1281,7 @@ body:has(.home) {
 .card .card-icon {
   position: absolute;
   bottom: 36px;
-  right: 50px;
+  left: 50px;
 }
 .card .card-text {
   font-size: 28px;
@@ -1294,8 +1294,8 @@ body:has(.home) {
   height: 30px;
   background: url("../images/home-arw.png") no-repeat center center;
   position: absolute;
+  right: 50px;
   bottom: 57px;
-  left: 50px;
 }
 .card .badge {
   position: absolute;
