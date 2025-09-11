@@ -1,0 +1,49 @@
+
+.header{
+    padding: 44px;
+    &-container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 0;
+        width: var(--container-xl);
+        margin: 0 auto;
+    }
+    .logo{
+        a{
+            font-size: 0;
+            display: block;
+            width: 240px;
+            height: 28px;
+            background: url('@/assets/images/logo.png') no-repeat center center;
+        }
+    }
+    .header-util{
+        display: flex;
+        align-items: center;
+        gap: 28px;
+        .user{
+            background: url('@/assets/images/icon-user.png') no-repeat 0 center;
+            font-size: 16px;
+            height: 27px;
+            padding-left: 34px;
+            font-weight: 500;
+            font-size: 22px;
+            color: #fff;
+        }
+        .btn-logout{
+            width: 111px;
+            height: 36px;
+            color: #2F2F2F;
+            font-weight: 500;
+            border: 1px solid #fff;
+            border-radius: 21px;
+            cursor: pointer;
+            font-weight: 700;
+            font-size: 20px;
+            color: #fff;
+        }
+    }
+}
+
+body{background-color:#2F2F2F;}

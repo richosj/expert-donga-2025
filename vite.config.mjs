@@ -92,6 +92,11 @@ export default defineConfig(() => {
     root: 'src',
     base: './',
     publicDir: '../public',
+    resolve: {
+      alias: {
+        '@': path.resolve(__dirname, 'src')
+      }
+    },
     build: {
       outDir: '../dist',
       emptyOutDir: true,
@@ -104,6 +109,7 @@ export default defineConfig(() => {
         )
       }
     },
+
     plugins: [
       handlebars({
         partialDirectory: path.resolve(__dirname, 'src/components'),

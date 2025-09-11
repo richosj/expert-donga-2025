@@ -1,5 +1,5 @@
 {
-  "name": "krds-template",
+  "name": "expert-donga-2025",
   "version": "1.0.0",
   "scripts": {
     "dev": "vite",
@@ -13,8 +13,5 @@
     "sass": "^1.70.0",
     "vite": "^5.0.0",
     "vite-plugin-handlebars": "^2.0.0"
-  },
-  "dependencies": {
-    "krds-uiux": "^1.0.5"
   }
 }
