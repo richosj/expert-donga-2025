@@ -1,0 +1,77 @@
+<!-- @layout layouts/non-sub.html -->
+<section class="">
+    <div class="container">
+        <h2 class="section-title">팀장 고민 작성</h2>
+        <div class="board-write">
+            <table class="board-write-table">
+                <colgroup>
+                    <col width="215">
+                    <col width="auto">
+                    <col width="215">
+                    <col width="auto">
+                </colgroup>
+                <tr>
+                    <th>제목</th>
+                    <td colspan="3">
+                        <input type="text" class="board-write-title" placeholder="제목을 입력하세요">
+                    </td>
+                </tr>
+                <tr>
+                    <th>구분</th>
+                    <td>
+                        <select class="select" style="width:500px">
+                            <option value="">구분을 선택하세요</option>
+                            <option value=""></option>
+                            <option value=""></option>
+                        </select>
+                    </td>
+                    <th>작성자</th>
+                    <td>
+                        <div class="form-radio-group">
+                            <label class="label-radio">
+                                <input type="radio" name="author-type" value="name" checked>
+                                <i></i>
+                                이름사용
+                            </label>
+                            <label class="label-radio">
+                                <input type="radio" name="author-type" value="nickname">
+                                <i></i>
+                                닉네임사용
+                            </label>
+                            <input type="text" class="board-write-author" placeholder="닉네임 입력" disabled>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>내용</th>
+                    <td colspan="3">
+                        <textarea class="board-write-content" placeholder="내용을 입력하세요"></textarea>
+                    </td>
+                </tr>
+            </table>
+            <div class="board-write-btn">
+                <button class="btn btn-complete">완료</button>
+                <button class="btn btn-cancel">취소</button>
+            </div>
+        </div>
+    </div>
+    </section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const authorTypeRadios = document.querySelectorAll('input[name="author-type"]');
+    const nicknameInput = document.querySelector('.board-write-author');
+    
+    authorTypeRadios.forEach(radio => {
+        radio.addEventListener('change', function() {
+            if (this.value === 'nickname') {
+                nicknameInput.disabled = false;
+                nicknameInput.focus();
+            } else {
+                nicknameInput.disabled = true;
+                nicknameInput.value = '';
+            }
+        });
+    });
+});
+</script>

@@ -1,0 +1,167 @@
+@use 'abstracts/variables' as *;
+@use 'abstracts/functions' as *;
+@use 'abstracts/mixins' as *;
+
+// Play Page Styles
+.play {
+  padding-top: 100px; 
+}
+
+.play{
+  .slide-wrapper{
+    position: relative;
+    padding-left: 70px;
+    padding-right: 70px;
+    .swiper-button-next,
+    .swiper-button-prev{
+      width: 40px;height: 40px;
+      font-size: 0;
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      &::after{
+        display: none;
+      }
+    }
+    .swiper-button-next{background-image: url('@/assets/images/slider-next.png');}
+    .swiper-button-prev{background-image: url('@/assets/images/slider-prev.png');}
+  }
+}
+
+.play-header {
+  margin-bottom: 40px;
+  
+}
+.card-item {
+  
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 90px;
+  border-radius: 40px 40px 0 0;
+  background-color: #8C8C8C;
+  padding: 0 35px;
+}
+
+.phase-badge{
+  color: #fff;
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.month-badge {
+  color: #fff;
+  border-radius: 25px;
+  border: 1px solid #fff;
+  font-weight: 700;
+  font-size: 30px;
+  width: 95px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-content {
+  padding: 35px 30px;
+  height: 430px;
+  border: 3px solid #F0F0F0;
+  border-top: 0;
+  border-radius: 0 0 30px 30px;
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #8c8c8c;
+  font-weight: 800;
+  font-size: 28px;
+  line-height: 38px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.card-description {
+  font-size: 17px;
+  color: #000;
+  line-height: 26px;
+  font-weight: 500;
+  margin: 0 0 35px 0;
+  text-align: center;
+}
+
+.card-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.action-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 55px;
+  background-color: #F0F0F0;
+  border-radius: 10px;
+  padding: 0 28px;
+  .action-icon {
+    width: 28px;
+    height: 28px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    &.action-icon-1{
+      background-image: url('@/assets/images/icon-plan-1.png');
+    }
+    &.action-icon-2{
+      background-image: url('@/assets/images/icon-plan-2.png');
+    }
+    &.action-icon-3{
+      background-image: url('@/assets/images/icon-plan-3.png');
+    }
+  }
+  
+  span {
+    font-size: 20px;
+    color: #000;
+    font-weight: 500;
+  }
+}
+
+
+.swiper-slide-active{
+  .plan{
+    .card-header{
+      background-color: #1e40af;
+    }
+    .card-title{
+      color: #1e40af;
+    }
+    .action-item{
+      background-color: #DAE2F6;
+    }
+  }
+  .do{
+    .card-header{
+      background-color: #FF4E02;
+    }
+    .card-title{
+      color: #FF4E02;
+    }
+    .action-item{
+      background-color: #FFEAE1;
+    }
+  }
+  .see{
+    .card-header{
+      background-color: #A08057;
+    }
+    .card-title{
+      color: #A08057;
+    }
+    .action-item{
+      background-color: #F9F0E4;
+    }
+  }
+}

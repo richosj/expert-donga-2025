@@ -1,11 +1,13 @@
-
+.container{
+    width: var(--container-xl);
+    margin: 0 auto;
+}
 .header{
-    padding: 44px;
+    padding: 44px 0;
     &-container{
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 1rem 0;
         width: var(--container-xl);
         margin: 0 auto;
     }
@@ -45,5 +47,3 @@
         }
     }
 }
-
-body{background-color:#2F2F2F;}

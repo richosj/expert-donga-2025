@@ -3,22 +3,6 @@
       "title": "홈",
       "banner": { "title": "", "subtitle": "" },
       "breadcrumb": []
-    },
-    "about.html": {
-      "title": "회사 소개",
-      "banner": { "title": "회사 소개 배너", "subtitle": "우리는..." },
-      "breadcrumb": [
-        { "href": "/", "label": "홈" },
-        { "label": "회사 소개" }
-      ]
-    },
-    "notice.html": {
-      "title": "공지사항",
-      "banner": { "title": "공지사항 배너", "subtitle": "공지사항입니다." },
-      "breadcrumb": [
-        { "href": "/", "label": "홈" },
-        { "label": "공지사항" }
-      ]
     }
   }
   

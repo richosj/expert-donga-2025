@@ -1,0 +1,154 @@
+
+// Dashboard Styles
+body:has(.home){
+  background:#2F2F2F url('@/assets/images/main-bg.png') no-repeat center center / cover;
+  
+}
+.home{
+  padding-bottom: 110px;
+}
+  
+.dashboard {
+  display: flex;
+  width: 1580px;
+  gap: 112px;
+  
+  margin: 0 auto;
+}
+
+.dashboard-left {
+  flex: 1;
+  color: white;
+  
+  .year {
+    font-size: 67px;
+    line-height: 138px;
+  }
+  
+  .brand {
+    font-size: 136px;
+    font-weight: 800;
+    line-height: 138px;
+  }
+  
+  .subtitle {
+    font-weight: 800;
+    font-size: 78px;
+    line-height: 82px;
+    color: #8C8C8C;
+    margin-top: 8px;
+    margin-bottom: 86px;
+  }
+  
+  .description {
+    font-weight: 500;
+    font-size: 22px;
+    color: #fff;
+    b{
+      font-weight: 700;
+    }
+  }
+}
+
+.dashboard-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 42px;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+}
+
+.card {
+  display: block;
+  background: white;
+  border-radius: 40px;
+  padding: 36px 50px;
+  position: relative;
+  width: 380px;
+  height: 260px;
+  .card-icon {
+    position: absolute;
+    bottom: 36px;
+    left: 50px;
+  }
+  
+  .card-text {
+    font-size: 28px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 38px;
+  }
+  
+  .card-arrow {
+    width: 48px;
+    height: 30px;
+    background: url('@/assets/images/home-arw.png') no-repeat center center;
+    position: absolute;
+    
+    right: 50px;
+    bottom: 57px;
+  }
+  
+  .badge {
+    position: absolute;
+    display: block;
+    top: -7px;
+    right: 40px;
+    font-size: 0;
+    width: 28px;
+    height: 39px;
+    background: url('@/assets/images/n.png') no-repeat center center / 100% auto;
+  }
+}
+
+.card-teal {
+  background-color: #00A0C9;
+}
+
+.card-blue {
+  background-color: #162DA1;
+}
+
+.card-orange {
+  background-color: #FF4E02;
+}
+
+.card-brown {
+  background-color: #A08057;
+}
+
+.notice-bar {
+  width: 782px;
+  height: 70px;
+  border-radius: 60px;
+  background:#fff url('@/assets/images/home-icon-notice.png') no-repeat 33px center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .notice-link {
+    display: inline-flex;
+    vertical-align: middle;
+    align-items: center;
+    font-size: 26px;
+    color: #8C8C8C;
+  }
+  
+  .notice-badge {
+    background: #ff6b35;
+    color: white;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 700;
+    margin-left: 10px;
+  }
+}

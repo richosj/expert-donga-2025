@@ -4,7 +4,7 @@ import fs from 'fs'
 import Hbs from 'handlebars'
 import path from 'path'
 import { fileURLToPath } from 'url'
-import { defineConfig } from 'vite'
+import { defineConfig, loadEnv } from 'vite'
 import handlebars from 'vite-plugin-handlebars'
 
 const __filename = fileURLToPath(import.meta.url)
@@ -87,42 +87,91 @@ const applyLayoutPlugin = {
   }
 }
 
-export default defineConfig(() => {
+// ── Vite 설정
+export default defineConfig(({ mode }) => {
+  const env = loadEnv(mode, process.cwd(), '')
+
   return {
     root: 'src',
     base: './',
     publicDir: '../public',
-    resolve: {
-      alias: {
-        '@': path.resolve(__dirname, 'src')
-      }
-    },
     build: {
       outDir: '../dist',
       emptyOutDir: true,
+      assetsInlineLimit: 0,   // ✅ 이미지 base64 인라인 방지
+      cssCodeSplit: true,     // ✅ CSS 분리
+      minify: false,          // ✅ JS/CSS 압축 끔
       rollupOptions: {
         input: Object.fromEntries(
           glob.sync('src/*.html').map(file => {
             const name = path.basename(file, '.html')
             return [name, path.resolve(__dirname, file)]
-          })
-        )
+          }),
+        ),
+        output: {
+          entryFileNames: 'assets/js/[name].js',
+          chunkFileNames: 'assets/js/[name].js',
+          assetFileNames: ({ name }) => {
+            if (/\.(css)$/.test(name ?? '')) {
+              return 'assets/css/[name][extname]'
+            }
+            if (/\.(png|jpe?g|gif|svg|webp)$/.test(name ?? '')) {
+              return 'assets/images/[name][extname]'
+            }
+            return 'assets/[name][extname]'
+          }
+        },
+        manualChunks(id) {
+          if (id.includes('/src/js/common/')) {
+            return 'common'
+          }
+        }
       }
     },
-
+    esbuild: {
+      minify: false
+    },
+    resolve: {
+      alias: {
+        '@': path.resolve(__dirname, 'src')
+      }
+    },
     plugins: [
       handlebars({
-        partialDirectory: path.resolve(__dirname, 'src/components'),
+        partialDirectory: [
+          path.resolve(__dirname, 'src/partials'),
+          path.resolve(__dirname, 'src/components')
+        ],
         helpers: hbsHelpers,
         context: (filename) => {
           const name = path.basename(filename)
           if (name === 'index.html') {
-            return { pages: allPages } // index.html 전용 → 전체 페이지 목록
+            return { pages: allPages }
           }
-          return pageData[name] || {} // 나머지는 pageData에서
+          return pageData[name] || {}
         }
       }),
-      applyLayoutPlugin
+      applyLayoutPlugin,
+      {
+        name: 'cleanup-html',
+        closeBundle() {
+          const distPath = path.resolve(__dirname, '../dist')
+          if (!fs.existsSync(distPath)) return
+
+          const htmlFiles = fs.readdirSync(distPath).filter(f => f.endsWith('.html'))
+
+          htmlFiles.forEach(file => {
+            const filePath = path.join(distPath, file)
+            let content = fs.readFileSync(filePath, 'utf-8')
+            content = content.replace(/ crossorigin/g, '')
+            content = content.replace(/ as="style"/g, '') // ✅ 잘못된 속성 제거
+            content = content.replace(/<link rel="modulepreload" [^>]+?>/g, '')
+            fs.writeFileSync(filePath, content)
+          })
+
+          console.log('✅ 빌드 후 modulepreload & crossorigin 제거 완료')
+        }
+      }
     ]
   }
 })

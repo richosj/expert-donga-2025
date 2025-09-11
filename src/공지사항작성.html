@@ -1,0 +1,46 @@
+<!-- @layout layouts/non-sub.html -->
+<section class="notice-write">
+<div class="container">
+    <h2 class="section-title">공지사항 작성</h2>
+    <div class="board-write">
+        <table class="board-write-table">
+            <tr>
+                <th>제목</th>
+                <td>
+                    <input type="text" class="board-write-title" placeholder="제목을 입력하세요">
+                </td>
+            </tr>
+            <tr>
+                <th>구분</th>
+                <td>
+                    <select class="select">
+                        <option value="">구분을 선택하세요</option>
+                        <option value=""></option>
+                        <option value=""></option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th>내용</th>
+                <td>
+                    <textarea class="board-write-content" placeholder="내용을 입력하세요"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <th>첨부파일</th>
+                <td>
+                    <div class="file-input-box">
+                        <input type="file" class="file-input" id="file-input">
+                        <span class="file-name">파일명</span>
+                        <label for="file-input" class="file-label">파일선택</label>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <div class="board-write-btn">
+            <button class="btn btn-complete">완료</button>
+            <button class="btn btn-cancel">취소</button>
+        </div>
+    </div>
+</div>
+</section>

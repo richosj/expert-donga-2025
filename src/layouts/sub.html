@@ -2,15 +2,30 @@
 <html lang="ko">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width:1200px,initial-scale=1" />
+  <meta name="viewport" content="width:1580px" />
   <meta name="description" content="동아쏘시오그룹 2025">
   <title>동아쏘시오그룹 2025</title>
+  <link rel="stylesheet" as="style" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-gov-dynamic-subset.min.css" />
+  <link rel="stylesheet" href="/lib/swiper/swiper-bundle.min.css">
+  <script src="/lib/swiper/swiper-bundle.min.js"></script>
+  <link rel="stylesheet" href="./assets/css/index.css">
 </head>
 <body>
-  {{> Header }}
+  <div class="subtop">
+    {{> Header }}
+
+    <div class="container">
+      <div class="sub2-only">
+        <p>
+          ‘이달의 리더십 플레이’ 내용을 확인 후 활동을 진행한 ‘이달의 과제’ 내용을 아래 양식에 맞게 내용을 작성해주세요.<br>
+          템플릿 양식을 자체 수정, 변경해 사용중이신 경우 오른쪽 상단의 ‘파일 업로드하기’를 통해 파일을 업로드 해주세요
+        </p>
+        <div class="point">*과제를 작성/업로드한 후 꼭! ‘제출하기’를 눌러 과제 제출을 완료해 주세요.</div>
+      </div>
+    </div>
+
+  </div>
   <main id="app" class="layout-sub">
-    {{> Banner title=banner.title subtitle=banner.subtitle }}
-    {{> Breadcrumb items=breadcrumb }}
     {{{body}}}
   </main>
 

@@ -1,0 +1,142 @@
+<!-- @layout layouts/sub2.html -->
+<div class="nav-tabs l3">
+  <div class="container">
+    <a href="#" class="tab">공지사항 작성</a>
+    <a href="#" class="tab active">과제 제출 관리</a>
+    <a href="#" class="tab">과제 종합 관리</a>
+  </div>
+</div>
+
+<section class="assignment-management">
+  <div class="container">
+    <div class="page-header">
+      <h2 class="page-title">과제 제출 관리</h2>
+      <div class="status-info">
+        <span>완료 <b>1</b>명</span>
+        <span>총인원 <b>3</b>명</span>
+      </div>
+    </div>
+    
+    <div class="search-section">
+      <div class="search-form">
+        <div class="form-group">
+          <label>소속</label>
+          <select class="select-input">
+            <option value="">전체</option>
+            <option value="holding">동아쏘시오홀딩스</option>
+            <option value="otsuka">동아오츠카</option>
+            <option value="st">동아ST</option>
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label>과제</label>
+          <select class="select-input">
+            <option value="">전체</option>
+            <option value="assignment1">고객니즈탐색 앰플릿</option>
+            <option value="assignment2">팀 업무현황 인식 템플릿</option>
+          </select>
+        </div>
+        
+        <div class="form-group gap-5">
+          <input type="text" class="search-input" placeholder="검색어를 입력하세요">
+          <button class="search-btn">🔍</button>
+        </div>
+        
+        <button class="excel-btn"></button>
+      </div>
+    </div>
+    
+    <div class="table-container">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>번호</th>
+            <th>이름</th>
+            <th>소속</th>
+            <th>팀명</th>
+            <th>비밀번호 초기화</th>
+            <th>과제명</th>
+            <th>제출현황</th>
+            <th>제출확인</th>
+            <th>다운로드</th>
+            <th>독려메일</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>김동하</td>
+            <td>동아쏘시오홀딩스</td>
+            <td>인재육성팀</td>
+            <td><button class="reset-btn">초기화</button></td>
+            <td>고객니즈탐색 앰플릿</td>
+            <td>미완료</td>
+            <td>
+              <div class="toggle-switch"></div>
+            </td>
+            <td><button class="download-icon"></button></td>
+            <td><button class="email-btn">메일발송</button></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>이팀장</td>
+            <td>동아쏘시오홀딩스</td>
+            <td>인재육성팀</td>
+            <td><button class="reset-btn">초기화</button></td>
+            <td>고객니즈탐색 앰플릿</td>
+            <td>미완료</td>
+            <td>
+              <div class="toggle-switch on"></div>
+            </td>
+            <td><button class="download-icon"></button></td>
+            <td><button class="email-btn">메일발송</button></td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>박팀장</td>
+            <td>동아쏘시오홀딩스</td>
+            <td>인재육성팀</td>
+            <td><button class="reset-btn">초기화</button></td>
+            <td>고객니즈탐색 앰플릿</td>
+            <td>미완료</td>
+            <td>
+              <div class="toggle-switch on"></div>
+            </td>
+            <td><button class="download-icon"></button></td>
+            <td><button class="email-btn">메일발송</button></td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>최팀장</td>
+            <td>동아쏘시오홀딩스</td>
+            <td>인재육성팀</td>
+            <td><button class="reset-btn">초기화</button></td>
+            <td>고객니즈탐색 앰플릿</td>
+            <td>미완료</td>
+            <td>
+              <div class="toggle-switch"></div>
+            </td>
+            <td><button class="download-icon"></button></td>
+            <td><button class="email-btn">메일발송</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    
+    <div class="bottom-actions">
+      <button class="btn-outline">일괄 다운로드</button>
+      <button class="btn-outline">일괄 메일발송</button>
+    </div>
+    
+    <div class="pagination">
+      <button class="page prev"></button>
+      <button class="page active">1</button>
+      <button class="page">2</button>
+      <button class="page">3</button>
+      <button class="page">4</button>
+      <button class="page">5</button>
+      <button class="page next"></button>
+    </div>
+  </div>
+</section>

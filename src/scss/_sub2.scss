@@ -1,0 +1,93 @@
+@use 'abstracts/variables' as *;
+@use 'abstracts/functions' as *;
+@use 'abstracts/mixins' as *;
+
+.status-hgroup{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 27px;
+  padding-top: 90px;
+  h2{
+    font-size: 34px;
+    color: #000;
+    line-height: 38px;
+    font-weight: 700;
+  }
+  .status-legend{
+    display: flex;
+    gap: 15px;
+    .legend-item{
+      display: flex;
+      align-items: center;
+      font-size: 20px;
+      font-weight: 500;
+      gap: 5px;
+      .legend-circle{
+        width: 34px;
+        height: 34px;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        &.completed{
+          background-image: url('@/assets/images/icon-completed.png');
+        }
+        &.scheduled{
+          background-image: url('@/assets/images/icon-scheduled.png');
+        }
+        &.not-submitted{
+          background-image: url('@/assets/images/icon-not-submitted.png');
+        }
+      }
+    }
+  }
+}
+
+.status-section {
+  height: 180px;
+  border-radius: 15px;
+  border: 2px solid #d2d2d2;
+  padding: 46px 100px;
+  margin-bottom: 66px;
+}
+
+.timeline {
+  background: url('@/assets/images/timeline-bg.png') no-repeat center 22px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 76px;
+}
+
+.month-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  
+  .month-circle {
+    width: 50px;
+    height: 50px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
+  
+  span {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 25px;
+    color: #000;
+  }
+  
+  &.completed .month-circle {
+    background-image: url('@/assets/images/icon-completed-lg.png');
+  }
+  
+  &.scheduled .month-circle {
+    background-image: url('@/assets/images/icon-scheduled-lg.png');
+  }
+  
+  &.not-submitted .month-circle {
+    background-image: url('@/assets/images/icon-not-submitted-lg.png');
+  }
+}
