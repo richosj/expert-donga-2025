@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width:1580px" />
+  <meta name="description" content="동아쏘시오그룹 2025">
+  <title>동아쏘시오그룹 2025</title>
+  <link rel="stylesheet" as="style" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-gov-dynamic-subset.min.css" />
+  <link rel="stylesheet" href="/lib/swiper/swiper-bundle.min.css">
+  <script src="/lib/swiper/swiper-bundle.min.js"></script>
+  <link rel="stylesheet" href="./assets/css/index.css">
+</head>
+<body>
+  <div class="subtop">
+    <!-- header //-->
+    <header id="header" class="header">
+        <div class="header-container">
+            <h1 class="logo">
+                <a href="/">
+                    <span class="visual-hidden">동아쏘시오그룹 2025</span>
+                </a>
+            </h1>
+            <div class="header-util">
+                <a href="#" class="user"><b>김동아</b>님</a>
+                <button type="button" class="btn-logout">Logout</button>
+            </div>
+            
+        </div>
+    </header>
+    <!-- //header -->
+     
+    <div class="container">
+      <a href="#" class="btn-sub">
+        <span>
+            과제 <br>종합 관리
+        </span>
+        <i><i></i></i>
+      </a>
+    </div>
+
+  </div>
+  <main id="app" class="layout-sub">
+    <!-- @layout layouts/sub2.html -->
+<script>
+  function toggleDetail(btn) {
+    const mainRow = btn.closest('.main-row');
+    const detailRow = mainRow.nextElementSibling;
+    
+    if(detailRow.style.display === 'none') {
+      detailRow.style.display = 'table-row';
+      //btn.textContent = '접기'; 
+    } else {
+      detailRow.style.display = 'none'; 
+      btn.textContent = '상세보기';
+    }
+  }
+</script>
+<div class="nav-tabs l3">
+  <div class="container">
+    <a href="#" class="tab">공지사항 작성</a>
+    <a href="#" class="tab">과제 제출 관리</a>
+    <a href="#" class="tab active">과제 종합 관리</a>
+  </div>
+</div>
+<section class="comprehensive-management">
+  <div class="container">
+    <div class="page-header">
+      <h2 class="page-title">과제 제출 관리</h2>
+      <div class="status-info">
+        <button class="btn-excel">엑셀 다운로드</button>
+      </div>
+    </div>
+ 
+    <div class="table-container">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>선택</th>
+            <th>No.</th>
+            <th>월</th>
+            <th>P/D/S</th>
+            <th>역량명</th>
+            <th>과제명</th>
+            <th>출원원</th>
+            <th>제출</th>
+            <th>미제출</th>
+            <th>상세보기</th>
+          </tr>
+        </thead>
+        <tbody>
+         
+          <tr class="main-row">
+            <td><input type="checkbox"></td>
+            <td>1</td>
+            <td>9</td>
+            <td>PLAN</td>
+            <td>사업 및 업무현황 인식</td>
+            <td>팀 업무현황 인식 템플릿</td>
+            <td>620</td>
+            <td>330</td>
+            <td>290</td>
+            <td><button class="btn-outline-white detail-btn" onclick="toggleDetail(this)">상세보기</button></td>
+          </tr>
+          <tr class="detail-row" style="display:none">
+            <td colspan="10" class="summary-table-row">
+              <div class="summary-table-container">
+                <table class="summary-table">
+                  <thead>
+                    <tr>
+                      <th>No.</th>
+                      <th>소속</th>
+                      <th>출원원</th>
+                      <th>제출</th>
+                      <th>미제출</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>동아쏘시오홀딩스</td>
+                      <td>620</td>
+                      <td class="submitted">330</td>
+                      <td class="not-submitted">290</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </td>
+          </tr>
+          <tr class="main-row">
+            <td><input type="checkbox"></td>
+            <td>1</td>
+            <td>9</td>
+            <td>PLAN</td>
+            <td>사업 및 업무현황 인식</td>
+            <td>팀 업무현황 인식 템플릿</td>
+            <td>620</td>
+            <td>330</td>
+            <td>290</td>
+            <td><button class="btn-outline-white detail-btn" onclick="toggleDetail(this)">상세보기</button></td>
+          </tr>
+          <tr class="detail-row" style="display:none">
+            <td colspan="10" class="summary-table-row">
+              <div class="summary-table-container">
+                <table class="summary-table">
+                  <thead>
+                    <tr>
+                      <th>No.</th>
+                      <th>소속</th>
+                      <th>출원원</th>
+                      <th>제출</th>
+                      <th>미제출</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>동아쏘시오홀딩스</td>
+                      <td>620</td>
+                      <td class="submitted">330</td>
+                      <td class="not-submitted">290</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </td>
+          </tr>
+          
+          <tr class="main-row">
+            <td><input type="checkbox"></td>
+            <td>1</td>
+            <td>9</td>
+            <td>PLAN</td>
+            <td>사업 및 업무현황 인식</td>
+            <td>팀 업무현황 인식 템플릿</td>
+            <td>620</td>
+            <td>330</td>
+            <td>290</td>
+            <td><button class="btn-outline-white detail-btn" onclick="toggleDetail(this)">상세보기</button></td>
+          </tr>
+          <tr class="detail-row" style="display:none">
+            <td colspan="10" class="summary-table-row">
+              <div class="summary-table-container">
+                <table class="summary-table">
+                  <thead>
+                    <tr>
+                      <th>No.</th>
+                      <th>소속</th>
+                      <th>출원원</th>
+                      <th>제출</th>
+                      <th>미제출</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>동아쏘시오홀딩스</td>
+                      <td>620</td>
+                      <td class="submitted">330</td>
+                      <td class="not-submitted">290</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </td>
+          </tr>
+          
+        </tbody>
+      </table>
+    </div>
+    
+  </div>
+</section>
+
+
+
+  </main>
+
+  <!-- footer //-->
+  <footer id="footer" class="footer">
+    <div class="container">
+      <div class="l">
+        서울시 동대문구 천호대로 64 <br>
+        T. 02-920-8114  F. 02-923-8224  E. recruit@donga.co.kr
+      </div>
+      <div class="r">
+        <div class="footer-logo"></div>
+        <p class="copyright">© 2023, Dong-A Socio Holdings Inc. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+   <!-- //footer -->
+    
+  <script type="module" src="/js/main.js"></script>
+</body>
+</html>

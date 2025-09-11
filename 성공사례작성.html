@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width:1580px" />
+  <meta name="description" content="동아쏘시오그룹 2025">
+  <title>동아쏘시오그룹 2025</title>
+  <link rel="stylesheet" as="style" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-gov-dynamic-subset.min.css" />
+  <link rel="stylesheet" href="./assets/css/index.css">
+</head>
+<body>
+ 
+  <main id="app" class="layout-sub2">
+    <!-- @layout layouts/non-sub.html -->
+<section class="">
+    <div class="container">
+        <h2 class="section-title">D PLAY 성공 사례 작성</h2>
+        <div class="board-write">
+            <table class="board-write-table">
+                <colgroup>
+                    <col width="215">
+                    <col width="550">
+                    <col width="215">
+                    <col width="auto">
+                </colgroup>
+                <tr>
+                    <th>제목</th>
+                    <td colspan="3">
+                        <input type="text" class="board-write-title" placeholder="제목을 입력하세요">
+                    </td>
+                </tr>
+                <tr>
+                    <th>구분</th>
+                    <td>
+                        <select class="select" style="width:100%">
+                            <option value="">구분을 선택하세요</option>
+                            <option value=""></option>
+                            <option value=""></option>
+                        </select>
+                    </td>
+                    <th>작성자</th>
+                    <td>
+                        <input type="text" placeholder="작성자 명 입력">
+                    </td>
+                </tr>
+                <tr>
+                    <th>내용</th>
+                    <td colspan="3">
+                        <textarea class="board-write-content" placeholder="내용을 입력하세요"></textarea>
+                    </td>
+                </tr>
+            </table>
+            <div class="board-write-btn">
+                <button class="btn btn-complete">완료</button>
+                <button class="btn btn-cancel">취소</button>
+            </div>
+        </div>
+    </div>
+    </section>
+
+    <div class="modal-container" style="left:0;transform:translateX(0%);">
+        <div class="modal-content">
+            <h2>내용이 임시 저장되었습니다.</h2>
+            <div class="feedback-box">
+                <p>
+                    최종 내용 적성 후 꼭! <br>
+                    <span class="color-blue">‘제출하기’</span>를 통해 과제 제출을 완료해주세요
+                </p>
+                <p>인라인으로 style 넣엇어요 확인 후 지어ㅜ주세요~</p>
+            </div>
+            <div class="modal-btn">
+                <button class="btn-blue">확인</button>
+            </div>
+        </div>
+    </div>
+    <div class="modal-container">
+        <div class="modal-content">
+            <h2>첨부파일 업로드</h2>
+           <div class="upload-box">
+                <div class="upload-box-inner">
+                    <span>고객니즈 템플릿1.pdf</span>
+                        <button type="button" class="btn-del">삭제</button>
+                </div>
+                <div class="upload-box-inner">
+                    <span>고객니즈 템플릿1.pdf</span>
+                    <button type="button" class="btn-del">삭제</button>
+                </div>
+
+                <div class="file-box">
+                    <div class="file-text"></div>
+                    <button type="button" class="btn-upload">파일선택</button>
+                </div>
+           </div>
+            <div class="modal-btn">
+                <button class="btn-blue">확인</button>
+            </div>
+        </div>
+    </div>
+
+
+  </main>
+  <script type="module" src="/js/main.js"></script>
+</body>
+</html>

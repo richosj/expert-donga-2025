@@ -1,0 +1,16 @@
+# node_modules: 패키지 라이브러리
+node_modules/
+
+# 빌드 결과물
+dist/
+build/
+
+# OS/IDE 관련 파일
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# 환경 설정 파일 (민감정보 있으면!)
+.env
+.env.*

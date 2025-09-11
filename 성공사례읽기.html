@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width:1580px" />
+  <meta name="description" content="동아쏘시오그룹 2025">
+  <title>동아쏘시오그룹 2025</title>
+  <link rel="stylesheet" as="style" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-gov-dynamic-subset.min.css" />
+  <link rel="stylesheet" href="./assets/css/index.css">
+</head>
+<body>
+ 
+  <main id="app" class="layout-sub2">
+    <!-- @layout layouts/non-sub.html -->
+<section class="detail-view">
+    <h2 class="section-title">D PLAY 성공 사례</h2>
+    <div class="container">
+        <div class="post-detail board-write">
+            <table class="board-write-table">
+                <tr>
+                    <th>제목</th>
+                    <td colspan="7">성과평가 할 때, 자꾸 우는 팀원이 있어요!</td>
+                </tr>
+                <tr>
+                    <th>구분</th>
+                    <td>11월 / 성과점검 및 피드백</td>
+                    <th>작성자</th>
+                    <td colspan="5">
+                        <div class="form-radio-group">
+                            <label class="label-radio">
+                                <input type="radio" name="author-type" value="name" checked>
+                                <i></i>
+                                이름사용
+                            </label>
+                            <label class="label-radio">
+                                <input type="radio" name="author-type" value="nickname">
+                                <i></i>
+                                닉네임사용
+                            </label>
+                            <input type="text" class="nickname-input" placeholder="닉네임 입력" disabled>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th style="width:215px">작성일시</th>
+                    <td>2025-07-07 오전11:17:08</td>
+                    <th style="width:215px">조회수</th>
+                    <td>72</td>
+                    <th style="width:82px">댓글</th>
+                    <td>72</td>
+                    <th style="width:82px">추천수</th>
+                    <td>72</td>
+                </tr>
+            </table>
+            
+            <div class="post-content">
+                <p>자꾸 우는 팀원에게 어떻게 조치해야할까요? 방법 알려주세요. 난감합니다.</p>
+            
+            
+                <div class="empathy-section">
+                    <button class="empathy-btn">
+                        <i class="heart-icon"></i>
+                        공감해요
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="comment-section">
+            <div class="comment-form">
+                <div class="comment-form-inner">
+                    <textarea class="comment-input" placeholder="댓글을 남겨보세요"></textarea>
+                    <button class="comment-submit">등록</button>
+                </div>
+                <div class="form-radio-group">
+                    <label class="label-radio">
+                        <input type="radio" name="comment-author-type" value="name" checked>
+                        <i></i>
+                        이름사용
+                    </label>
+                    <label class="label-radio">
+                        <input type="radio" name="comment-author-type" value="nickname">
+                        <i></i>
+                        닉네임사용
+                    </label>
+                    <input type="text" class="comment-nickname-input" placeholder="닉네임 입력" disabled>
+                </div>
+            </div>
+            
+            <div class="comments">
+                <div class="comment">
+                    <div class="comment-meta">
+                        <span class="comment-author">바른이</span>
+                    </div>
+                    <div class="comment-content">정말 좋은 내용이네요. 우리에게 필요한 생각 찝어 주셔서 감사합니다좋은 내용이네요. 우리에게 필요한 생각 찝어 주셔서 감사합니다좋은 내용이네요. 우리에게 필요한 생각 찝어 주셔서 감사합니다좋은 내용이네요. 우리에게 필요한 생각 찝어 주셔서 감사합니다좋은 내용이네요. 우리에게 필요한 생각 찝어 주셔서 감사합니다좋은 내용이네요. 우리에게 필요한 생각 찝어 주셔서 감사합니다.</div>
+                </div>
+                
+                <div class="comment">
+                    <div class="comment-meta">
+                        <span class="comment-author">뽀식아빠</span>
+                    </div>
+                    <div class="comment-content">정말 좋은 내용이네요. 우리에게 필요한 생각 찝어 주셔서 감사합니다.</div>
+                </div>
+            </div>
+        </div>
+
+        
+        
+
+        <div class="board-view-btn">
+            <button class="btn-blue">목록</button>
+        </div>
+
+        
+            <div class="post-navigation">
+                <div class="prev-post">
+                    <span>이전글</span>
+                    <a href="#">디지털 시대, 고객 경험의 판이 바뀐다: 옴니채널 쇼핑의 부상과 그 대응 전략</a>
+                </div>
+                <div class="next-post">
+                    <span>다음글</span>
+                    <a href="#">디지털 시대의 명품 소비, 호감일까? 비호감일까?</a>
+                </div>
+            </div>
+   
+    </div>
+</section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // 게시물 작성자 라디오 버튼
+    const authorTypeRadios = document.querySelectorAll('input[name="author-type"]');
+    const nicknameInput = document.querySelector('.nickname-input');
+    
+    authorTypeRadios.forEach(radio => {
+        radio.addEventListener('change', function() {
+            if (this.value === 'nickname') {
+                nicknameInput.disabled = false;
+                nicknameInput.focus();
+            } else {
+                nicknameInput.disabled = true;
+                nicknameInput.value = '';
+            }
+        });
+    });
+    
+    // 댓글 작성자 라디오 버튼
+    const commentAuthorTypeRadios = document.querySelectorAll('input[name="comment-author-type"]');
+    const commentNicknameInput = document.querySelector('.comment-nickname-input');
+    
+    commentAuthorTypeRadios.forEach(radio => {
+        radio.addEventListener('change', function() {
+            if (this.value === 'nickname') {
+                commentNicknameInput.disabled = false;
+                commentNicknameInput.focus();
+            } else {
+                commentNicknameInput.disabled = true;
+                commentNicknameInput.value = '';
+            }
+        });
+    });
+});
+</script>
+  
+  </main>
+  <script type="module" src="/js/main.js"></script>
+</body>
+</html>
