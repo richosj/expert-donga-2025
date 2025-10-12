@@ -40,12 +40,45 @@
       
       <div class="notice-bar">
         <div class="notice-icon"></div>
-        <a href="#" class="notice-link">
-          <div class="notice-text">리더십 프랙티스 <b>온라인 공지사항</b></div>
-          <div class="notice-badge">N</div>
-        </a>
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <a href="#" class="notice-link">
+                <div class="notice-text">리더십 프랙티스 <b>온라인 공지사항</b></div>
+                <div class="notice-badge">N</div>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#" class="notice-link">
+                <div class="notice-text">리더십 프랙티스 <b>온라인 공지사항</b></div>
+                <div class="notice-badge">N</div>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#" class="notice-link">
+                <div class="notice-text">리더십 프랙티스 <b>온라인 공지사항</b></div>
+                <div class="notice-badge">N</div>
+              </a>
+            </div>
+          </div>
+        </div>
         
       </div>
     </div>
   </div>
 </section>
+
+<script>
+  const swiper = new Swiper('.swiper', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    pagination: false,
+    loop: true,
+    navigation: false,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+    direction: 'vertical',
+  });
+</script>

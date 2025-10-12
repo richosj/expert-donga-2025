@@ -130,11 +130,15 @@ body:has(.home){
   display: flex;
   align-items: center;
   justify-content: center;
+  .swiper {
+    height: 30px;
+  }
   .notice-link {
     display: inline-flex;
     vertical-align: middle;
     align-items: center;
     font-size: 26px;
+    height: 30px;
     color: #8C8C8C;
   }
   
