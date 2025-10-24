@@ -1,0 +1,112 @@
+<!-- @layout layouts/sub.html -->
+<div class="nav-tabs v2">
+  <div class="container">
+    <a href="#" class="tab">이달의 리더십 플레이</a>
+    <a href="#" class="tab active">이달의 과제 제출하기</a>
+    <a href="#" class="tab">팀장 고민 게시판</a>
+    <a href="#" class="tab">성공사례 모음집</a>
+  </div>
+</div>
+
+<section class="assignment-management">
+  <div class="container">
+    <div class="page-header">
+      <h2 class="page-title">고객니즈 탐색 템플릿</h2>
+    </div>
+
+    <div class="needs-notice">
+      <ol>
+          <li>① 각 항목 순서에 맞춰, 팀원들과 자유롭게 의견을 나누고 다양한 시각을 모아서 정리해봅니다.</li>
+          <li>② 의견을 정리할 때에는 고객의 입장과 우리의 입장을 구분하여 정리합니다.</li>
+          <li>③ 고객의 기대사항과 우리 팀의 기여방안을 한눈에 확인 할 수 있도록 고객 니즈 탐색 맵을 작성합니다.</li>
+      </ol>
+      <button><i></i>파일 업로드하기</button>
+    </div>
+
+    <div>
+      <div class="submission-template">
+        <style>
+          .submission-template { margin-top:20px; }
+          .meta-row { display:flex; gap:12px; margin-bottom:12px; }
+          .meta-row .cell { flex:1; background:#f3f3f3; border:1px solid #ddd; padding:10px 12px; min-height:42px; box-sizing:border-box; }
+          .meta-row .cell.title { width:150px; flex:0 0 150px; background:#e6e6e6; text-align:center; font-weight:600; }
+
+          .kpi-table, .quarter-table { width:100%; border-collapse:collapse; margin-bottom:22px; }
+          .kpi-table th, .kpi-table td, .quarter-table th, .quarter-table td {
+            border:1px solid #ddd;
+            padding:18px;
+            vertical-align:top;
+            background:#fff;
+          }
+          .kpi-table thead th, .quarter-table thead th { background:#e9e9e9; font-weight:600; text-align:center; }
+          .kpi-table thead th.small { width:12%; }
+          .kpi-table thead th.wide { width:28%; }
+          .quarter-table thead th.center { text-align:center; }
+          .quarter-table thead th.col-q { width:11%; }
+          .foot-fab { margin-top:8px; }
+        </style>
+
+        <!-- 작성자 / 이름 행 -->
+        <div class="meta-row">
+          <div class="cell title">작성일</div>
+          <div class="cell">작성일</div>
+          <div class="cell title">이름</div>
+          <div class="cell">이름이름</div>
+        </div>
+
+        <!-- KPI 표 -->
+        <table class="kpi-table" aria-label="KPI 표">
+          <thead>
+            <tr>
+              <th class="wide">목표명</th>
+              <th class="wide">CSF(핵심성공요인)</th>
+              <th class="wide">KPI(핵심성과지표)</th>
+              <th class="small">가중치(%)</th>
+              <th class="small">Level(등급별 Grid)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- 빈 행을 여러개 만들어 스페이스를 채움 -->
+            <tr><td rowspan="4"></td><td rowspan="4"></td><td rowspan="4"></td><td rowspan="4"></td><td rowspan="4"></td></tr>
+            <tr></tr><tr></tr><tr></tr>
+          </tbody>
+        </table>
+
+        <!-- 분기별 실행계획 표 -->
+        <table class="quarter-table" aria-label="분기별 실행계획 및 진행상황">
+          <thead>
+            <tr>
+              <th colspan="4">분기별 실행계획 및 진행상황</th>
+              <th colspan="2">1차 팀원 자가 평가</th>
+            </tr>
+            <tr>
+              <th class="col-q center">1Q</th>
+              <th class="col-q center">2Q</th>
+              <th class="col-q center">3Q</th>
+              <th class="col-q center">4Q</th>
+              <th class="center">KPI 달성수준</th>
+              <th class="center">자가평가 의견</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="height:220px;"></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="foot-fab">
+      <a href="#" class="btn1">목록</a>
+      <a href="#" class="btn1">임시저장</a>
+      <a href="#" class="btn2">제출하기</a>
+    </div>
+    
+    
+</section>
